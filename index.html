@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoda - Free Telegram Proxies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --bg-color-dark: #010409;
+            --bg-color-light: #f5f5f5;
+            --card-bg-color-dark: #0d1117;
+            --card-bg-color-light: #ffffff;
+            --border-color-dark: rgba(255, 255, 255, 0.1);
+            --border-color-light: rgba(0, 0, 0, 0.1);
+            --text-color-dark: #e6edf3;
+            --text-color-light: #1f2937;
+            --text-secondary-color-dark: #7d8590;
+            --text-secondary-color-light: #6b7280;
+            --accent-color: #2f81f7;
+            --success-color: #238636;
+            --warning-color: #f59e0b;
+            --danger-color: #da3633;
+            --glow-color-dark: rgba(47, 129, 247, 0.7);
+            --glow-color-light: rgba(59, 130, 246, 0.5);
+        }
+
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body.dark {
+            background: linear-gradient(135deg, #010409 0%, #1e3a8a 50%, #2e1065 100%);
+            color: var(--text-color-dark);
+        }
+
+        body.light {
+            background: linear-gradient(135deg, #f5f5f5 0%, #dbeafe 50%, #fbcfe8 100%);
+            color: var(--text-color-light);
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle.dark {
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 10px rgba(47, 129, 247, 0.7), 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+
+        .particle.light {
+            background: rgba(31, 41, 55, 0.7);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(244, 114, 182, 0.3);
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 0.6; }
+            100% { transform: translateY(-100vh); opacity: 0.2; }
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 36px;
+            background: linear-gradient(135deg, #2f81f7, #a855f7);
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(47, 129, 247, 0.5);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        body.light .theme-toggle {
+            background: linear-gradient(135deg, #3b82f6, #ec4899);
+        }
+
+        .theme-toggle i {
+            color: #ffffff;
+            font-size: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .proxy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+
+        .proxy-card {
+            background-color: var(--card-bg-color-dark);
+            border: 1px solid var(--border-color-dark);
+            border-radius: 12px;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        body.light .proxy-card {
+            background-color: var(--card-bg-color-light);
+            border-color: var(--border-color-light);
+        }
+
+        .proxy-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background: radial-gradient(
+                600px circle at var(--mouse-x) var(--mouse-y),
+                var(--glow-color-dark),
+                transparent 40%
+            );
+            opacity: 0;
+            transition: opacity 0.4s ease-out;
+            z-index: 0;
+        }
+
+        body.light .proxy-card::before {
+            background: radial-gradient(
+                600px circle at var(--mouse-x) var(--mouse-y),
+                var(--glow-color-light),
+                transparent 40%
+            );
+        }
+
+        .proxy-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .proxy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: rgba(47, 129, 247, 0.4);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color-dark);
+            border: 1px solid var(--border-color-dark);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.light .btn {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text-color-light);
+            border-color: var(--border-color-light);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-color);
+            color: white;
+        }
+
+        body.light .btn:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--text-color-light);
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #1f6feb;
+            box-shadow: 0 0 15px rgba(47, 129, 247, 0.5);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid transparent;
+        }
+
+        body.light .status-badge {
+            background: rgba(0,0,0,0.1);
+        }
+
+        .status-good { color: #3fb950; border-color: #3fb950; }
+        .status-medium { color: #d29922; border-color: #d29922; }
+        .status-bad { color: #f85149; border-color: #f85149; }
+        .status-unknown { color: var(--text-secondary-color-dark); border-color: var(--text-secondary-color-dark); }
+        body.light .status-unknown { color: var(--text-secondary-color-light); border-color: var(--text-secondary-color-light); }
+
+        .pulsing-dot { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7); }
+            50% { box-shadow: 0 0 0 8px rgba(63, 185, 80, 0); }
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color-dark);
+            border-radius: 50%;
+            border-top-color: var(--accent-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        body.light .loading-spinner {
+            border-color: var(--border-color-light);
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .fade-in-up { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #qrModal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #qrModal.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #qrModal:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #qrModalContent {
+            width: 256px;
+            height: 256px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            .proxy-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="particles" id="particles"></div>
+    <button class="theme-toggle" id="themeToggle" title="تغییر تم">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <main class="container mx-auto px-4 py-8 relative z-10">
+        <header class="text-center mb-12 fade-in-up">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-cyan-300">
+                Khoda Proxy Finder
+            </h1>
+            <p class="text-lg text-slate-400 max-w-xl mx-auto">
+               نسل جدید دسترسی به پروکسی‌های امن و پرسرعت MTProto
+            </p>
+            <p id="lastVisit" class="text-base text-slate-500 mt-2"></p>
+        </header>
+
+        <section id="control-panel" class="proxy-card p-6 mb-8 fade-in-up" style="animation-delay: 0.2s;">
+            <div class="card-content">
+                <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+                    <button id="refreshBtn" class="btn w-full sm:w-auto px-6 py-3 font-semibold flex items-center justify-center gap-2">
+                        <i id="refreshIcon" class="fa-solid fa-rotate btn-icon transition-transform duration-300"></i>
+                        <span>دریافت پروکسی جدید</span>
+                    </button>
+                    <div class="text-center">
+                        <span class="text-slate-400">کل پروکسی‌ها: </span>
+                        <span id="proxyCount" class="font-bold text-xl">0</span>
+                        <span class="mx-2 text-slate-600">|</span>
+                        <span class="text-slate-400">پروکسی‌های فعال: </span>
+                        <span id="activeCount" class="font-bold text-xl text-green-400">0</span>
+                    </div>
+                    <button id="testAllBtn" class="btn w-full sm:w-auto px-6 py-3 font-semibold flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning btn-icon transition-transform duration-300"></i>
+                        <span>تست همه</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div id="status" class="text-center mb-8 hidden">
+            <div class="inline-flex items-center gap-3 text-slate-300">
+                <div class="loading-spinner"></div>
+                <span class="font-medium">در حال بارگذاری و تست پروکسی‌ها...</span>
+            </div>
+        </div>
+
+        <div id="proxyList" class="proxy-grid"></div>
+
+        <div id="loadMoreContainer" class="text-center mt-8 hidden">
+            <button id="loadMoreBtn" class="btn px-8 py-3 font-semibold">
+                <i class="fa-solid fa-chevron-down mr-2 btn-icon"></i> نمایش بیشتر
+            </button>
+        </div>
+
+        <div id="noResults" class="text-center py-16 hidden">
+            <div class="proxy-card p-12 inline-block">
+                <div class="card-content">
+                    <div class="w-24 h-24 bg-slate-800/60 rounded-full flex items-center justify-center mx-auto mb-6 border border-slate-700">
+                        <i class="fa-solid fa-ghost text-4xl text-slate-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">پروکسی یافت نشد!</h3>
+                    <p class="text-slate-400 mb-6">لطفاً لیست را بروزرسانی کنید یا بعداً تلاش کنید.</p>
+                    <button onclick="loadProxies()" class="btn btn-primary px-6 py-3">
+                        <i class="fa-solid fa-rotate mr-2"></i> تلاش مجدد
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-800 fade-in-up" style="animation-delay: 0.4s;">
+        <div class="container mx-auto px-4">
+            <a href="https://github.com/inicarus/khoda" target="_blank" rel="noopener noreferrer">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block hover:scale-110 transition-transform duration-300">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.61-3.36-1.34-3.36-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0112 6.8c.85.004 1.71.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.66.94.66 1.89v2.8c0 .26.16.57.66.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" fill="#e6edf3"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <div id="qrModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="proxy-card p-8 max-w-sm w-full">
+            <div class="card-content">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-white">اسکن کد QR</h3>
+                    <button id="closeQrModal" class="p-2 text-red-500" onclick="document.getElementById('qrModal').classList.add('hidden')">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                <div id="qrModalContent" class="w-full h-auto aspect-square mx-auto bg-white p-2 rounded-lg"></div>
+                <p class="text-center text-sm text-slate-400 mt-4">برای اتصال به پروکسی، این کد را با تلگرام اسکن کنید.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', e => {
+            document.querySelectorAll('.proxy-card').forEach(card => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+            });
+        }, { passive: true });
+
+        let allProxies = [];
+        let visibleProxies = [];
+        let isLoading = false;
+        const perPage = 12;
+        const loadMoreCount = 8;
+
+        const elements = {
+            proxyList: document.getElementById('proxyList'),
+            proxyCount: document.getElementById('proxyCount'),
+            activeCount: document.getElementById('activeCount'),
+            refreshBtn: document.getElementById('refreshBtn'),
+            refreshIcon: document.getElementById('refreshIcon'),
+            testAllBtn: document.getElementById('testAllBtn'),
+            status: document.getElementById('status'),
+            noResults: document.getElementById('noResults'),
+            loadMoreContainer: document.getElementById('loadMoreContainer'),
+            loadMoreBtn: document.getElementById('loadMoreBtn'),
+            themeToggle: document.getElementById('themeToggle')
+        };
+        
+        const parseProxyUrl = (url) => {
+            try {
+                const proxyUrl = url.startsWith('https://t.me/proxy') ? url.replace('https://t.me/proxy?', 'tg://proxy?') : url;
+                const urlParams = new URLSearchParams(proxyUrl.replace('tg://proxy?', ''));
+                return {
+                    server: urlParams.get('server')?.trim() || 'نامشخص',
+                    port: urlParams.get('port')?.trim() || 'نامشخص',
+                    secret: urlParams.get('secret')?.trim() || 'نامشخص'
+                };
+            } catch (e) {
+                return { server: 'نامشخص', port: 'نامشخص', secret: 'نامشخص' };
+            }
+        };
+
+        const loadProxies = async () => {
+            if (isLoading) return;
+            setLoadingState(true);
+
+            try {
+                // Add a cache-busting query parameter
+                const response = await fetch(`proxy.txt?v=${new Date().getTime()}`);
+                if (!response.ok) throw new Error("Network response was not ok");
+                const text = await response.text();
+                allProxies = text.split('\n')
+                    .filter(line => line.trim() && (line.startsWith('tg://proxy') || line.startsWith('https://t.me/proxy')))
+                    .map((line, i) => ({ id: i, ...parseProxyUrl(line), ping: null, status: 'unknown' }));
+                
+                showToastNotification('✅ پروکسی‌ها با موفقیت بارگذاری شدند.', 'success');
+            } catch (error) {
+                console.error(error);
+                allProxies = []; // Clear proxies on error
+                showToastNotification('⚠️ خطا در دریافت پروکسی‌ها.', 'error');
+            } finally {
+                visibleProxies = allProxies.slice(0, perPage);
+                renderProxies();
+                updateCounts();
+                updateLoadMoreButton();
+                setLoadingState(false);
+            }
+        };
+
+        const renderProxies = () => {
+            elements.proxyList.innerHTML = '';
+            if (visibleProxies.length === 0 && !isLoading) {
+                elements.noResults.classList.remove('hidden');
+                return;
+            }
+            elements.noResults.classList.add('hidden');
+
+            visibleProxies.forEach((proxy, index) => {
+                const card = document.createElement('div');
+                card.className = 'proxy-card fade-in-up';
+                card.style.animationDelay = `${index * 0.05}s`;
+                card.id = `proxy-card-${proxy.id}`;
+                card.innerHTML = getProxyCardHTML(proxy);
+                elements.proxyList.appendChild(card);
+            });
+            addCardEventListeners();
+        };
+
+        const getProxyCardHTML = (proxy) => {
+            const statusInfo = getStatusInfo(proxy.status);
+            const pingInfo = getPingInfo(proxy.ping);
+
+            return `
+                <div class="card-content space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-lg flex items-center gap-3">
+                           <div class="w-3 h-3 rounded-full ${statusInfo.dotClass} ${statusInfo.pulseClass}" title="${statusInfo.text}"></div>
+                           ${proxy.server}
+                        </h3>
+                        <span class="status-badge ${statusInfo.className}">
+                            <i class="${statusInfo.icon}"></i> ${statusInfo.text}
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-ethernet w-4 text-center"></i><span>پورت: ${proxy.port}</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-signal w-4 text-center"></i><span id="ping-${proxy.id}" class="font-semibold ${pingInfo.className}">${pingInfo.text}</span></div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-sm">کلید امنیتی (Secret)</div>
+                        <div class="p-2 text-xs break-all bg-gray-900/70 rounded-md border font-mono">${proxy.secret}</div>
+                    </div>
+                    <d
