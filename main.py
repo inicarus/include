@@ -34,14 +34,30 @@ def clean_line(line):
     line = ''.join(c for c in line if unicodedata.category(c)[0] != 'C')
     return line
 
+# --- ⭐️ تابع اصلاح شده اینجاست ⭐️ ---
 def check_proxy_status(server, port, timeout=3):
     try:
+        # ۱. ابتدا پورت را به عدد تبدیل می‌کنیم
+        port_num = int(port)
+        
+        # ۲. بررسی می‌کنیم که پورت در محدوده مجاز باشد
+        if not 0 <= port_num <= 65535:
+            logging.warning(f"Invalid port number {port_num} for server {server}. Skipping.")
+            return False
+
+        # ۳. حالا با پورت معتبر به سرور وصل می‌شویم
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(timeout)
-        result = sock.connect_ex((server, int(port)))
+        result = sock.connect_ex((server, port_num))
         sock.close()
         return result == 0
+        
+    # ۴. اگر پورت اصلا عدد نبود یا خطای شبکه رخ داد، آن را نادیده می‌گیریم
+    except (ValueError, TypeError):
+        logging.warning(f"Invalid port value '{port}' for server {server}. Cannot convert to integer. Skipping.")
+        return False
     except (socket.timeout, socket.gaierror, ConnectionRefusedError, OSError):
+        # این برای خطاهای شبکه است
         return False
 
 def fetch_proxies_from_text_urls(urls):
@@ -149,7 +165,6 @@ def update_readme(proxy_list):
         iran_now = utc_now.astimezone(iran_tz)
         jalali_date = jdatetime.datetime.fromgregorian(datetime=iran_now)
         update_time_iran = jalali_date.strftime('%H:%M %d-%m-%Y')
-        logging.info(f"Updating README with Iranian timestamp: {update_time_iran}")
 
         sample_proxies = random.sample(proxy_list, min(20, len(proxy_list))) if proxy_list else []
         table_rows = ""
@@ -158,7 +173,6 @@ def update_readme(proxy_list):
             match = re.match(r'^https://t\.me/proxy\?server=([^&]+)&port=(\d+).*$', proxy_url)
             if match:
                 server, port = match.groups()
-                # این خط اصلاح شد. آکولاد بسته برای f-string جا افتاده بود
                 table_rows += f"| {i} | `{server}` | `{port}` | ✅ فعال | [لینک پروکسی]({proxy_url}) |\n"
         
         readme_path = 'README.md'
