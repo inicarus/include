@@ -7,8 +7,10 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 */3 * * *' # هر ۳ ساعت یک‌بار اجرا می‌شود
+    - cron: '0 */6 * * *' # هر ۳ ساعت یک‌بار اجرا می‌شود
   workflow_dispatch: # برای اجرای دستی
+permissions:
+  contents: write
 
 jobs:
   build:
