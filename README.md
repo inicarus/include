@@ -1,4 +1,4 @@
-# 📊 Khoda Proxy Finder (آخرین بروزرسانی: 14:53 30-06-1404)
+# 📊 Khoda Proxy Finder (آخرین بروزرسانی: 16:04 30-06-1404)
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" />
@@ -34,26 +34,26 @@
 
 | # | سرور (Server) | پورت (Port) | وضعیت | لینک پروکسی |
 |---|---|---|---|---|
-| 1 | `89.110.111.195` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=89.110.111.195&port=443&secret=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D) |
-| 2 | `195.62.32.99` | `9861` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=195.62.32.99&port=9861&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
-| 3 | `48483.meli.meli.zban-mas.info` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=48483.meli.meli.zban-mas.info&port=8888&secret=7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
-| 4 | `7.meli.zban-mas.info` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=7.meli.zban-mas.info&port=8888&secret=7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
-| 5 | `117108899.meli.meli.zban-mas.info` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=117108899.meli.meli.zban-mas.info&port=8888&secret=7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
-| 6 | `91.238.92.176` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=91.238.92.176&port=443&secret=7otdyWf9v23L9-j4vrzGtv5OemY0WUxtZGg0T3NCcDUwNUFBMDUwMDEwMjAzMDQwNTA2MDcwODA5Li11cGRhdGUxLmFuZHJvaWQuZ29vZ2xlLnN5bmMuaW1hZ2UudG5hYmlzaWJpemlwLmly) |
-| 7 | `103.161.34.251` | `9861` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=103.161.34.251&port=9861&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
-| 8 | `brookswashere.space` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=brookswashere.space&port=443&secret=10dadd1e7c27a20098abb5bf53ca26a8) |
-| 9 | `91.98.39.91` | `9443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=91.98.39.91&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
-| 10 | `140.233.167.20` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=140.233.167.20&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
-| 11 | `89.251.10.24` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=89.251.10.24&port=443&secret=ee151151151151151151151151151151156d656469612e737465616d706f77657265642e636f6d) |
-| 12 | `qavi.189-208-55-72.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=qavi.189-208-55-72.ir&port=443&secret=7td9tD7jch8Py0Ck_2O1zSdtZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
-| 13 | `77.238.239.178` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=77.238.239.178&port=443&secret=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D) |
-| 14 | `91.99.182.228` | `9443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=91.99.182.228&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
-| 15 | `88.80.139.140` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=88.80.139.140&port=443&secret=7777772e6e69632e69727w) |
-| 16 | `austria.salzburg.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=austria.salzburg.ir&port=443&secret=ee0000f00f0f775555fffffff5006e2e696D656469612E737465616D706F77657265642E636F6D) |
-| 17 | `9933.meli.zban-mas.info` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=9933.meli.zban-mas.info&port=8888&secret=7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
-| 18 | `op.hotelghooo.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=op.hotelghooo.ir&port=443&secret=ee000000000000000000000000000000007777772e4869646550726f78692e696f) |
-| 19 | `enable-rquest-security-support.allow-reuest.co.uk` | `9741` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=enable-rquest-security-support.allow-reuest.co.uk&port=9741&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d) |
-| 20 | `yaho.koptrin.48.37-68-174.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=yaho.koptrin.48.37-68-174.ir&port=443&secret=7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
+| 1 | `213.206.138.54.paaawdreboot.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=213.206.138.54.paaawdreboot.ir&port=443&secret=eeXifpB2GBv9shh2kvi5lAtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 2 | `185.207.98.2.diskqavi.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=185.207.98.2.diskqavi.ir&port=443&secret=eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29t) |
+| 3 | `91.238.92.238` | `155` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=91.238.92.238&port=155&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 4 | `1111.meli.zban-mas.info` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=1111.meli.zban-mas.info&port=8888&secret=7gAA8A8Pd1VV____9QBuLmltZWRpYS5zdGVhbXBvd2VyZWQuY29t) |
+| 5 | `package.cbloudcdn.com` | `1000` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=package.cbloudcdn.com&port=1000&secret=7qi6jdKKygIxFalhsTItDWZ3d3cuY2Jsb3VkY2RuLmNvbQ) |
+| 6 | `44.atousa4sam.co.uk` | `6773` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=44.atousa4sam.co.uk&port=6773&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 7 | `44.iropt-r.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=44.iropt-r.ir&port=443&secret=7gAA8A8Pd1VV____9QBuLmlkb3dubG9hZC53aW5kb3dzdXBkYXRlLmNvbQ) |
+| 8 | `157.90.0.57` | `155` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=157.90.0.57&port=155&secret=eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t) |
+| 9 | `45.153.33.39` | `155` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=45.153.33.39&port=155&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 10 | `77.238.230.158` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=77.238.230.158&port=443&secret=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D) |
+| 11 | `7474.ir.koch.newdf12.info` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=7474.ir.koch.newdf12.info&port=8888&secret=1320PuNyHw_LQKT_Y7XNJw==) |
+| 12 | `185.245.107.102` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=185.245.107.102&port=443&secret=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D) |
+| 13 | `88.216.95.66.sorativip.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=88.216.95.66.sorativip.ir&port=443&secret=eeDDNEgYdJvXrFGRMCIMJQtY2RueWVrdGFuZXQuY29tZ) |
+| 14 | `163.5.31.48` | `8443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=163.5.31.48&port=8443&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 15 | `184.174.98.12` | `8888` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=184.174.98.12&port=8888&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 16 | `91.238.92.240` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=91.238.92.240&port=443&secret=eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t) |
+| 17 | `185.29.223.124` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=185.29.223.124&port=443&secret=7rJc31NLmTL5eReCJZJPndJ3d3cuZ29vZ2xlLmNvbQ) |
+| 18 | `allinone.transiiantanialnmiomana.info` | `666` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=allinone.transiiantanialnmiomana.info&port=666&secret=3emk8jsddowEqNfzkSDKW24=) |
+| 19 | `pablo.ps-fifaei.ir` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=pablo.ps-fifaei.ir&port=443&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) |
+| 20 | `91.84.100.213` | `443` | ✅ فعال | [لینک پروکسی](https://t.me/proxy?server=91.84.100.213&port=443&secret=eecBAgABAAfwAwOG4kw63QAAAARueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29t) |
 
 > **💡 نکته**: این جدول فقط نمونه‌ای از پروکسی‌هاست. برای دسترسی به لیست کامل و به‌روز، فایل [proxy.txt](proxy.txt) را دانلود کنید یا از **[صفحه وب پروژه](https://inicarus.github.io/khoda/)** استفاده کنید.
 
