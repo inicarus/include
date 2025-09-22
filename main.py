@@ -163,7 +163,7 @@ def send_proxies_to_channel(proxies):
     row = []
     for i, proxy in enumerate(proxies_to_send, 1):
         url = proxy['link'].replace('tg://proxy?', 'https://t.me/proxy?')
-        button = {'text': f"{proxy['country']} اتصال {i + 1}", 'url': url}
+        button = {'text': f"{proxy['country']} اتصال {i}", 'url': url}
         row.append(button)
         if len(row) == 2:
             keyboard.append(row)
