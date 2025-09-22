@@ -1,9 +1,6 @@
-name: Run Proxy Scraper
+name: Run Proxy Scraper and Send to Telegram
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
@@ -33,22 +30,23 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
-        # ... (بقیه این بخش بدون تغییر)
-        
-    - name: Run scraper
-      env: # <-- این بخش اضافه شده
+        # ... (این بخش بدون تغییر باقی می‌ماند)
+
+    - name: Run scraper and send to Telegram
+      env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-      run: python main.py # <-- این خط بدون تغییر
+      run: python main.py
 
-    - name: Commit and push changes
+    - name: Commit and push proxy.txt
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add proxy.txt README.md
+        git add proxy.txt
+        # فقط در صورتی کامیت کن که تغییری وجود داشته باشد
         if ! git diff --staged --quiet; then
-          git commit -m "Updated proxies and README"
+          git commit -m "Updated proxy list"
           git push
         else
-          echo "No changes to commit."
+          echo "No changes to proxy.txt to commit."
         fi
