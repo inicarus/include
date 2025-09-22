@@ -1,4 +1,4 @@
-# main.py
+# main.py - نسخه ساده‌شده فقط برای تلگرام
 
 import os
 import requests
@@ -20,96 +20,182 @@ import json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36'
-]
+USER_AGENTS = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36']
+COUNTRY_FLAGS = {
+    "US": "🇺🇸", "DE": "🇩🇪", "FR": "🇫🇷", "NL": "🇳🇱", "GB": "🇬🇧",
+    "RU": "🇷🇺", "CA": "🇨🇦", "FI": "🇫🇮", "IR": "🇮🇷", "SE": "🇸🇪",
+}
 
-def get_random_user_agent():
-    return random.choice(USER_AGENTS)
+def get_country_from_ip(ip):
+    try:
+        if not re.match(r"^\d{1,3}(\.\d{1,3}){3}$", ip):
+             ip = socket.gethostbyname(ip)
+        
+        response = requests.get(f"http://ip-api.com/json/{ip}?fields=countryCode", timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+            country_code = data.get('countryCode', 'XX')
+            return COUNTRY_FLAGS.get(country_code, '🌍')
+        return '🌍'
+    except Exception:
+        return '🌍'
 
+def process_proxy_line(line):
+    line = clean_line(line)
+    pattern = r'^(?:tg://proxy|https://t\.me/proxy)\?server=([^&]+)&port=(\d+)&secret=([a-zA-Z0-9\-_=]+)'
+    match = re.match(pattern, line)
+    if not match:
+        return None
+    
+    server, port, secret = match.groups()
+    
+    if not check_proxy_status(server, port):
+        return None
+        
+    country_flag = get_country_from_ip(server)
+    
+    return {
+        "link": f"tg://proxy?server={server}&port={port}&secret={secret}",
+        "country": country_flag
+    }
+
+def fetch_proxies_from_sources(text_urls, telegram_urls):
+    raw_lines = []
+    
+    for url in text_urls:
+        try:
+            logging.info(f"Fetching from text source: {url}")
+            response = requests.get(url, timeout=10)
+            if response.ok:
+                raw_lines.extend(response.text.splitlines())
+        except Exception as e:
+            logging.warning(f"Failed to fetch {url}: {e}")
+
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument(f'user-agent={random.choice(USER_AGENTS)}')
+    
+    with webdriver.Chrome(options=options) as driver:
+        for url in telegram_urls:
+            try:
+                logging.info(f"Fetching from Telegram channel: {url}")
+                driver.get(url)
+                time.sleep(5)
+                soup = BeautifulSoup(driver.page_source, 'html.parser')
+                proxy_elements = soup.find_all('a', href=re.compile(r'tg://proxy'))
+                raw_lines.extend([element.get('href') for element in proxy_elements])
+            except Exception as e:
+                logging.warning(f"Failed to fetch {url}: {e}")
+
+    processed_proxies = []
+    unique_links = set(filter(None, raw_lines))
+    
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        future_to_line = {executor.submit(process_proxy_line, line): line for line in unique_links}
+        for future in as_completed(future_to_line):
+            result = future.result()
+            if result:
+                processed_proxies.append(result)
+                
+    return processed_proxies
+
+def save_proxies_to_file(proxies, filename='proxy.txt'):
+    links = [p['link'] for p in proxies]
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.writelines(f"{link}\n" for link in sorted(links))
+        logging.info(f"Saved {len(links)} proxies to {filename}")
+    except IOError as e:
+        logging.error(f"Error writing to {filename}: {e}")
+
+def send_proxies_to_channel(proxies):
+    bot_token = os.getenv('BOT_TOKEN')
+    channel_id = os.getenv('CHANNEL_ID')
+    
+    if not bot_token or not channel_id:
+        logging.warning("BOT_TOKEN or CHANNEL_ID not set. Skipping sending message.")
+        return
+
+    proxies_to_send = random.sample(proxies, min(16, len(proxies)))
+    
+    tehran_tz = pytz.timezone('Asia/Tehran')
+    now_tehran = datetime.now(tehran_tz)
+    jalali_date = jdatetime.datetime.fromgregorian(datetime=now_tehran).strftime('%Y/%m/%d')
+    current_time = now_tehran.strftime('%H:%M')
+    
+    header = f"""
+╭⋟────𓄂ꪴꪰ𓆃────╮
+ | 𓐄𓐅𓐆𓐇 PЯӨXYFĪG 𓐇𓐆𓐅𓐄 ⁮⁮⁮|
+╰────────────⋞╯
+
+     💀PʀᴏxʏSᴋᴜʟʟ💀 
+❚⫘⫘⫘⫘⫘⫘⫘❚
+        ☠️MTProto II☠️ 
+           
+▬▭▬▭𓐄🧌𓐄▭▬▭▬
+{current_time} 𓍯 {jalali_date}
+"""
+    
+    keyboard = []
+    row = []
+    for i, proxy in enumerate(proxies_to_send, 1):
+        url = proxy['link'].replace('tg://proxy?', 'https://t.me/proxy?')
+        button = {'text': f"{proxy['country']} اتصال {i + 1}", 'url': url}
+        row.append(button)
+        if len(row) == 2:
+            keyboard.append(row)
+            row = []
+    if row:
+        keyboard.append(row)
+    
+    reply_markup = {'inline_keyboard': keyboard}
+    
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {'chat_id': channel_id, 'text': header, 'reply_markup': json.dumps(reply_markup)}
+    
+    try:
+        response = requests.post(url, json=payload, timeout=20)
+        if response.json().get('ok'):
+            logging.info("Successfully sent proxies to Telegram channel.")
+        else:
+            logging.error(f"Telegram API error: {response.text}")
+    except requests.RequestException as e:
+        logging.error(f"Failed to send message to Telegram: {e}")
+
+# --- توابع کمکی ---
 def clean_line(line):
     line = line.strip().replace('\r', '').replace('\n', '')
-    line = ''.join(c for c in line if unicodedata.category(c)[0] != 'C')
-    return line
+    return ''.join(c for c in line if unicodedata.category(c)[0] != 'C')
 
-# --- ⭐️ تابع اصلاح شده اینجاست ⭐️ ---
-def check_proxy_status(server, port, timeout=3):
+def check_proxy_status(server, port, timeout=2):
     try:
-        # ۱. ابتدا پورت را به عدد تبدیل می‌کنیم
         port_num = int(port)
-        
-        # ۲. بررسی می‌کنیم که پورت در محدوده مجاز باشد
-        if not 0 <= port_num <= 65535:
-            logging.warning(f"Invalid port number {port_num} for server {server}. Skipping.")
-            return False
-
-        # ۳. حالا با پورت معتبر به سرور وصل می‌شویم
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(timeout)
-        result = sock.connect_ex((server, port_num))
-        sock.close()
-        return result == 0
-        
-    # ۴. اگر پورت اصلا عدد نبود یا خطای شبکه رخ داد، آن را نادیده می‌گیریم
-    except (ValueError, TypeError):
-        logging.warning(f"Invalid port value '{port}' for server {server}. Cannot convert to integer. Skipping.")
-        return False
-    except (socket.timeout, socket.gaierror, ConnectionRefusedError, OSError):
-        # این برای خطاهای شبکه است
+        if not 0 < port_num <= 65535: return False
+        with socket.create_connection((server, port_num), timeout=timeout):
+            return True
+    except (ValueError, socket.gaierror, socket.timeout, ConnectionRefusedError, OSError):
         return False
 
-def fetch_proxies_from_text_urls(urls):
-    all_links = []
-    headers = {'User-Agent': get_random_user_agent()}
-    pattern = r'^(tg://proxy|https://t\.me/proxy)\?server=[^&]+&port=\d+(&secret=.+)$'
+if __name__ == "__main__":
+    text_sources = [
+        "https://raw.githubusercontent.com/MhdiTaheri/ProxyCollector/main/proxy.txt",
+        "https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt",
+    ]
+    telegram_sources = [
+        "https://t.me/s/ProxyMTProto",
+        "https://t.me/s/iRoProxy",
+    ]
     
-    for url in urls:
-        try:
-            logging.info(f"Fetching proxies from {url}")
-            response = requests.get(url, headers=headers, timeout=10)
-            response.raise_for_status()
-            
-            if url.endswith('.json'):
-                try:
-                    data = response.json()
-                    proxy_checks = []
-                    for item in data:
-                        server, port, secret = item.get('host'), item.get('port'), item.get('secret')
-                        if server and port and secret:
-                            proxy_checks.append((f"tg://proxy?server={server}&port={port}&secret={secret}", server, port))
-                    
-                    with ThreadPoolExecutor(max_workers=30) as executor:
-                        future_to_proxy = {executor.submit(check_proxy_status, server, port): proxy for proxy, server, port in proxy_checks}
-                        for future in as_completed(future_to_proxy):
-                            if future.result():
-                                all_links.append(future_to_proxy[future])
-                except json.JSONDecodeError as e:
-                    logging.error(f"Invalid JSON format in {url}: {e}")
-            else:
-                lines = response.text.splitlines()
-                proxy_checks = []
-                for line in lines:
-                    line = clean_line(line)
-                    if re.match(pattern, line):
-                        match = re.match(r'^(?:tg://proxy|https://t\.me/proxy)\?server=([^&]+)&port=(\d+)&secret=.+$', line)
-                        if match:
-                            proxy_checks.append((line, match.group(1), match.group(2)))
-                
-                with ThreadPoolExecutor(max_workers=30) as executor:
-                    future_to_proxy = {executor.submit(check_proxy_status, server, port): line for line, server, port in proxy_checks}
-                    for future in as_completed(future_to_proxy):
-                        if future.result():
-                            all_links.append(future_to_proxy[future])
-            
-        except requests.RequestException as e:
-            logging.error(f"HTTP error fetching {url}: {e}")
-        time.sleep(random.uniform(0.5, 1.0))
-    return all_links
-
-def fetch_proxies_from_telegram_channel(url):
-    proxies = []
+    active_proxies = fetch_proxies_from_sources(text_sources, telegram_sources)
+    
+    if active_proxies:
+        active_proxies.sort(key=lambda p: p['country'])
+        save_proxies_to_file(active_proxies)
+        send_proxies_to_channel(active_proxies)
+    else:
+        logging.warning("No active proxies found.")    proxies = []
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
