@@ -53,7 +53,6 @@ tg://proxy?server=185.84.157.13&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.15&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.15&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.21&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
-tg://proxy?server=185.84.157.21&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.22&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.231&port=443&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.24&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
@@ -64,8 +63,6 @@ tg://proxy?server=185.84.157.3&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.3&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=185.84.157.6&port=444&secret=FgMBAgABAAH8AxOG4kw63Q==
 tg://proxy?server=188.212.98.10&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
-tg://proxy?server=188.212.98.11&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
-tg://proxy?server=188.212.98.11&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.12&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.2&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.20&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
@@ -74,15 +71,13 @@ tg://proxy?server=188.212.98.21&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.22&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.22&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.4&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
-tg://proxy?server=188.212.98.40&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
+tg://proxy?server=188.212.98.4&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.40&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.5&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.50&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.51&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.51&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.54&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
-tg://proxy?server=188.212.98.54&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
-tg://proxy?server=188.212.98.55&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.55&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.57&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=188.212.98.58&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
@@ -139,7 +134,6 @@ tg://proxy?server=74.1.1.51&port=8770&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFu
 tg://proxy?server=74.1.1.52&port=65535&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=74.1.1.52&port=65535&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=74.1.1.53&port=65535&secret=dd79e344818749bd7ac519130220c25d09
-tg://proxy?server=74.1.1.53&port=65535&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=74.1.1.54&port=65535&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=74.1.1.55&port=65535&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=74.1.1.55&port=65535&secret=dd79e344818749bd7ac519130220c25d09
@@ -185,6 +179,7 @@ tg://proxy?server=android.gq.the-bests-servers.info&port=88&secret=7nnnAQIAAQAH8
 tg://proxy?server=api.android-st.info.&port=42341&secret=7nnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=api.android-st.info.&port=42341&secret=7nnnAQIAAQAH8AMDhuJMOt0=
 tg://proxy?server=app.x9q.pw&port=8443&secret=3XnnAQIAAQAH8AMDhuJMOt0
+tg://proxy?server=app.x9q.pw&port=8443&secret=3XnnAQIAAQAH8AMDhuJMOt0=
 tg://proxy?server=azadi.minetor.co.uk&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=b.artishchev.org&port=8443&secret=963a7fd525b04c4533ce776c9bd70f34
 tg://proxy?server=b.artishchev.org&port=8443&secret=963a7fd525b04c4533ce776c9bd70f34
@@ -203,7 +198,6 @@ tg://proxy?server=go.road-digger.info.&port=61016&secret=7nnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=hamrah-aval-pq.omide-hasti.info.&port=88&secret=7nnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=hamrah-aval-pq.omide-hasti.info.&port=88&secret=7nnnAQIAAQAH8AMDhuJMOt0=
 tg://proxy?server=hello-world.tg.engineer&port=443&secret=d9e48875e76c21092c63e78050247929
-tg://proxy?server=hello-world.tg.engineer&port=443&secret=d9e48875e76c21092c63e78050247929
 tg://proxy?server=https-cdn-ddns.itdeveloper.info.&port=88&secret=7nnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=https.alo-alo.ink.&port=8443&secret=dd79e7010200010007f0030386e24c3add
 tg://proxy?server=https.uptv443.shop.&port=8443&secret=3XnnAQIAAQAH8AMDhuJMOt0=
@@ -218,7 +212,6 @@ tg://proxy?server=nevis-prime.info&port=443&secret=eed451f808fd60ed2c45f11d38fdb
 tg://proxy?server=nevis-prime.info&port=443&secret=eed451f888fd60ed2c45f11d38fdbc87c56e657669732d7072696d652e696e666f
 tg://proxy?server=ns1.road-digger.info.&port=61016&secret=7nnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=oh.ajab-soorati-dare.info&port=42341&secret=7nnnAQIAAQAH8AMDhuJMOt0
-tg://proxy?server=oh.ajab-soorati-dare.info&port=42341&secret=7nnnAQIAAQAH8AMDhuJMOt0=
 tg://proxy?server=peyk.acharbashi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 tg://proxy?server=peyk.acharbashi.info&port=4515&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d
 tg://proxy?server=pretty.dokhtarbandari.info.&port=22&secret=eeNEgYdJvXrFGRMCIMJdCQ
