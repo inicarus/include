@@ -1,5 +1,6 @@
 tg://proxy?server=108.165.233.137&port=443&secret=24bd7c651c0cdef3195110f94d4c92ce
 tg://proxy?server=116.203.0.182&port=8443&secret=dd104462821249bd7ac519130220c25d09
+tg://proxy?server=130.49.218.57&port=443&secret=ee8aa50573bd2e964427df682f93935ce4646c2e676f6f676c652e636f6d
 tg://proxy?server=132.243.228.115&port=443&secret=ee3caf4d06bf6b23313068e4b3e743f91e79616e6465782e7275
 tg://proxy?server=132.243.228.115&port=443&secret=ee3caf4d06bf6b23313068e4b3e743f91e79616e6465782e7275
 tg://proxy?server=142.54.189.106&port=443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267
@@ -82,6 +83,7 @@ tg://proxy?server=tavakalta-alalah.info&port=443&secret=ee1603010200010001fc0303
 tg://proxy?server=tee.mobemouy.com&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 tg://proxy?server=tee.mobemouy.com&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d
 tg://proxy?server=tproxyru.live.&port=8980&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275
+tg://proxy?server=ultra.telehelp.top&port=443&secret=ee1d36cba6cc6ae2eb779806189b95efb864726976652e676f6f676c652e636f6d
 tg://proxy?server=w7.ewe.chillmybabe.ru&port=8443&secret=7jT7CJulnbpYHPMdOJZhYLZ3d3cud2lsZGJlcnJpZXMucnU
 tg://proxy?server=w7.ewe.chillmybabe.ru&port=8443&secret=7jT7CJulnbpYHPMdOJZhYLZ3d3cud2lsZGJlcnJpZXMucnU
 tg://proxy?server=win.sosproxy.space&port=443&secret=ee477ccce74a28c13a2ef6ec9e01510c3164726976652e676f6f676c652e636f6d
