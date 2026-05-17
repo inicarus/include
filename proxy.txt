@@ -25,7 +25,6 @@ tg://proxy?server=2.27.22.112&port=443&secret=ee17ea0a2562ea669ebe7308ee7f9ae63b
 tg://proxy?server=2.27.41.207&port=443&secret=9436fa39ab47ccb34f217ac6d06b4e58
 tg://proxy?server=204.168.129.90&port=443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=204.168.129.90&port=443&secret=dd104462821249bd7ac519130220c25d09
-tg://proxy?server=204.168.255.33&port=8080&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=37.27.38.205&port=443&secret=ee9d659fc2ae43e0b8323c082960233d7b7777772e636c6f7564666c6172652e636f6d
 tg://proxy?server=46.62.132.241&port=443&secret=eeae762d0e4d199c7a7085525d37e230c97777772e636c6f7564666c6172652e636f6d
 tg://proxy?server=50.7.41.162&port=443&secret=ee011808bcccfd224644ca7f231846a7d46d61782e7275
@@ -34,15 +33,14 @@ tg://proxy?server=62.238.27.70&port=443&secret=dd104462821249bd7ac519130220c25d0
 tg://proxy?server=77.42.79.76&port=4455&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=87.120.108.38&port=443&secret=f212b4ee21a6f1026aadae4ce0b08f98
 tg://proxy?server=87.120.108.48&port=443&secret=074e7d1d37cc043746fd0c823f20d21a
-tg://proxy?server=88.198.203.112&port=8080&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=89.125.113.155&port=443&secret=ee67af7b545eb72c3c47fc2ccb74aa41c979616e6465782e7275
 tg://proxy?server=89.125.113.189&port=443&secret=ee19835aa301cd9a6ceb68ad8d5ad9e0ac79616e6465782e7275
 tg://proxy?server=89.125.188.111&port=443&secret=eeb07da4931e2e88e60496723a88462a9279616e6465782e7275
 tg://proxy?server=91.107.189.181&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=91.108.248.15&port=443&secret=eec42cb4ae81a45f8c81cd512599925c7c79616e6465782e7275
-tg://proxy?server=95.216.222.63&port=443&secret=ee85f51151981bd69a6281f9e85395161a676f6f676c65617069732e636f6d
 tg://proxy?server=arixo.shop&port=443&secret=eec11798ab008831b474066c9e1ebf5c99617669746f2e7275
 tg://proxy?server=arixo.shop&port=443&secret=eec11798ab008831b474066c9e1ebf5c99617669746f2e7275
+tg://proxy?server=atg.proxytg.space&port=443&secret=eef9632da3b0ea3b51ab5840f93b2ddaff6174672e70726f787974672e7370616365
 tg://proxy?server=calcium-credit.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b
 tg://proxy?server=connect.nolags.pw&port=443&secret=ddc64c1442e6d67631dd7d40ed1e24aef2
 tg://proxy?server=connect.tproxyru.click&port=8980&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275
@@ -51,6 +49,7 @@ tg://proxy?server=dealer2-de.dealer.ac&port=8443&secret=ee81535a864acce5de15b221
 tg://proxy?server=dealer3-swe.dealer.ac&port=8443&secret=ee5afcdc6cd0823c91e8c453b0fd37be207477656e7475722e636f6d
 tg://proxy?server=dealer4-fin.dealer.ac&port=8443&secret=ee602b25b6e94c83ec0e24fbbc83c8bc547477656e7475722e636f6d
 tg://proxy?server=espress0-macch1ato-p0r-favor3.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b
+tg://proxy?server=ethereal.arixo.shop&port=443&secret=eed9fd89062ab62abcbf1bd82dfe914004617669746f2e7275
 tg://proxy?server=femboy.arixo.shop&port=443&secret=eec11798ab008831b474066c9e1ebf5c99617669746f2e7275
 tg://proxy?server=germany.tgproxysokol.pro&port=8443&secret=ee4215d16e455242e9b5ffb6349df285d06164732e78352e7275
 tg://proxy?server=germany.tgproxysokol.pro&port=8443&secret=ee4215d16e455242e9b5ffb6349df285d06164732e78352e7275
@@ -74,7 +73,6 @@ tg://proxy?server=proxy.yard-tg-bot.ru&port=443&secret=ee1cfe2c07741ef6c9d9dde94
 tg://proxy?server=s.rkn.tg&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b
 tg://proxy?server=s1.proxytg.space&port=443&secret=ee481fc4aa7c63d939142d4dbf07e1aac464726976652e676f6f676c652e636f6d
 tg://proxy?server=s1.proxytg.space&port=443&secret=ee481fc4aa7c63d939142d4dbf07e1aac464726976652e676f6f676c652e636f6d
-tg://proxy?server=swekitty.grittytarantula.sbs&port=443&secret=ee51cb8137d7fc9ac4ef73184f45d6208e7377656b697474792e677269747479746172616e74756c612e736273
 tg://proxy?server=tp.ascel.la&port=543&secret=eec1f71e1f27f7169fff4d48d2d03ca39e7777772e7472656c6c6f2e636f6d
 tg://proxy?server=two.turboproxy.pro&port=8443&secret=eec8150abdb60a541343858be088e857f66669727374627974652e7275
 tg://proxy?server=win.sosproxy.space&port=443&secret=ee477ccce74a28c13a2ef6ec9e01510c3164726976652e676f6f676c652e636f6d
