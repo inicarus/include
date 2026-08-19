@@ -70,6 +70,7 @@ tg://proxy?server=ai.golgoli1.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=api.groundfloorsolutions.co.uk.&port=443&secret=eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169
 tg://proxy?server=api.server2-5mk.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d
 tg://proxy?server=api2.medhata.org&port=2443&secret=ee9d072ce3c5b43f6b422bb1e7fe983cc4617069322e6d6564686174612e6f7267
+tg://proxy?server=api2.medhata.org&port=2443&secret=ee9d072ce3c5b43f6b422bb1e7fe983cc4617069322e6d6564686174612e6f7267
 tg://proxy?server=app.what-ever.co.uk.&port=443&secret=eeddffffffc5a1168b2ff3eba31cbfffff7765622e62616c652e6169
 tg://proxy?server=as.mkim.click&port=443&secret=ee2dfa3526fc70b7abd7a09eade6ccea1f61732e6d6b696d2e636c69636b
 tg://proxy?server=at.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ
@@ -95,6 +96,7 @@ tg://proxy?server=bia.guguli.co.uk&port=443&secret=ee1603010200010001fc030386e24
 tg://proxy?server=can.you.tell.me.how.can.i.bokhoramet.kiroftopmine.site.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 tg://proxy?server=can.you.tell.me.how.can.i.bokhoramet.kiroftopmine.site.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d
 tg://proxy?server=ccc.horizon555.co.uk&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
+tg://proxy?server=cdn2.medhata.org&port=2443&secret=ee7b9814d423bb50d370214258830fbde063646e322e6d6564686174612e6f7267
 tg://proxy?server=cdn5.cdnwave.org&port=443&secret=ee2c46ee89b4f2c79c1d8325d13091e580706574726f766963682e7275
 tg://proxy?server=chai.mikham.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ
 tg://proxy?server=close.your.mouth.and.eyse.kiroftopmine.site.&port=22&secret=AAAAAAAAAAAAAAAAAAAAAA
@@ -170,7 +172,9 @@ tg://proxy?server=mashti.just-money.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdC
 tg://proxy?server=max.kimt.click&port=443&secret=ee1b153cf06dbd43c6085c359a6702eb936d61782e6b696d742e636c69636b
 tg://proxy?server=me.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=media.happtg.org&port=443&secret=eed9cf709eb48bb5a37471fba84864bd7e766b2e7275
+tg://proxy?server=media10.happtg.org&port=443&secret=eeecd508d816f611bb329487809f8dac88706574726f766963682e7275
 tg://proxy?server=media6.happtg.org&port=443&secret=ee7391242569590e01416101927d38b565646e732d73686f702e7275
+tg://proxy?server=media9.happtg.org&port=443&secret=ee2e7c3d85e469cb8f825f4678a716a363706574726f766963682e7275
 tg://proxy?server=mio.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=mio.mozitop.co.uk&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=mizaneshgh2.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d09
@@ -186,7 +190,6 @@ tg://proxy?server=new.lambforkebeb.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=new.vafadari.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=new2.lambforkebeb.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=new7.mizanmizanesgh.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d09
-tg://proxy?server=node2.medhata.org&port=2443&secret=eeb19b644ed4a6c923d57abf3c7a52d1746e6f6465322e6d6564686174612e6f7267
 tg://proxy?server=noise.hajikalashatelservieshamrahavalcandy.co.uk&port=80&secret=7hbZ3hNtxAbJ6L5BQipx2_std3d3LnlhaG9vLmNvbQ
 tg://proxy?server=noise.hajikalashatelservieshamrahavalcandy.co.uk&port=80&secret=7hbZ3hNtxAbJ6L5BQipx2_std3d3LnlhaG9vLmNvbQ==
 tg://proxy?server=noone.lavazemi1.co.uk&port=2083&secret=eeNEgYdJvXrFGRMCIMJdCQ
@@ -199,6 +202,7 @@ tg://proxy?server=panel.hook--tehran.co.uk.&port=443&secret=3RBEYoISSb16xRkTAiDC
 tg://proxy?server=pesar.kocholo.co.uk.&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=premium.speed-benz.co.uk&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=proxtstar.live&port=443&secret=ee6a0333c1db3f8eaba5c76731a44203b6617669746f2e7275
+tg://proxy?server=proxy.lodkirmm.ru&port=8443&secret=ee16309abd572d284b309ef26bd7a3f68570726f78792e6c6f646b69726d6d2e7275
 tg://proxy?server=puot.mozitop.co.uk&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=qadim.zhigool.co.uk&port=22&secret=EERighJJvXrFGRMCIMJdCQ
 tg://proxy?server=ragor-beger.ghamgin.co.im.&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQ
@@ -211,7 +215,6 @@ tg://proxy?server=rich.whiteblox.org.&port=80&secret=3RbZ3hNtxAbJ6L5BQipx2_s=
 tg://proxy?server=rootssh2.co.uk.&port=4455&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=run.golgoli2.co.uk&port=2053&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=runserver.co.uk&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ
-tg://proxy?server=s3.assetflux.org&port=443&secret=ee8fc9c7632b344b1b76639c501ae7cfb5766b2e7275
 tg://proxy?server=s44447n.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=s4447n.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=s447n.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
@@ -232,7 +235,6 @@ tg://proxy?server=soh5.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130
 tg://proxy?server=soheil.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=star.talebi.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=starstg.neverspy.tech&port=443&secret=eee19ef78b188ec248d8187c787a46ccca737461727374672e6e657665727370792e74656368
-tg://proxy?server=static-resources-api.website&port=80&secret=eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d
 tg://proxy?server=sub.iran-tehran.co.uk.&port=443&secret=3RBEYoISSb16xRkTAiDCXQk
 tg://proxy?server=t.meow-network.com&port=443&secret=ee5622e11fff3e49bcc85280197a6106b5742e6d656f772d6e6574776f726b2e636f6d
 tg://proxy?server=tassian.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09
