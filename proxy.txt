@@ -12,6 +12,7 @@ tg://proxy?server=167.235.255.168&port=8443&secret=dd104462821249bd7ac519130220c
 tg://proxy?server=167.235.255.168&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=176.65.135.69&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=17fh.masi.ir.he6fhd.ru&port=8443&secret=dd104462821249bd7ac519130220c25d09
+tg://proxy?server=188.245.46.16&port=443&secret=eeDarKDarKDarKDarKDarK
 tg://proxy?server=194.120.230.106&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=204.168.207.138&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=208.87.242.223&port=8443&secret=EERighJJvXrFGRMCIMjdCQ
